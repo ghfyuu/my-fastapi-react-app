@@ -344,7 +344,9 @@ async def get_quiz_questions(category: Optional[str] = None, limit: int = 10):
         ]
         # Insert sample questions
         await db.quiz_questions.insert_many(sample_questions)
-        return sample_questions
+        # Return without MongoDB _id
+        questions = await db.quiz_questions.find({}, {"_id": 0}).to_list(limit)
+        return questions
     
     return questions
 
