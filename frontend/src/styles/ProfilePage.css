@@ -1,0 +1,239 @@
+/* Profile Page Styles */
+.profile-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  padding-bottom: 2rem;
+}
+
+.profile-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Profile Header */
+.profile-header {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.profile-avatar-large {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);
+}
+
+.profile-name {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #064e3b;
+  margin-bottom: 0.5rem;
+}
+
+.profile-email {
+  color: #6b7280;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.profile-level {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  color: #d97706;
+  border-radius: 20px;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+}
+
+.stat-icon {
+  color: #10b981;
+  margin-bottom: 1rem;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #064e3b;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+/* Section */
+.section {
+  padding: 2rem;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #064e3b;
+  margin-bottom: 1.5rem;
+}
+
+.section-title svg {
+  color: #10b981;
+}
+
+.empty-state {
+  text-align: center;
+  color: #6b7280;
+  padding: 2rem;
+  font-size: 0.875rem;
+}
+
+/* Badges Grid */
+.badges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1.5rem;
+}
+
+.badge-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.badge-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.badge-emoji {
+  font-size: 3rem;
+}
+
+.badge-name {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #d97706;
+  text-align: center;
+}
+
+/* Progress List */
+.progress-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.progress-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.progress-item:hover {
+  background: #f3f4f6;
+  transform: translateX(4px);
+}
+
+.progress-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.progress-game {
+  font-weight: 600;
+  color: #064e3b;
+  font-size: 0.875rem;
+}
+
+.progress-level {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.progress-score {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.score-points {
+  font-weight: 700;
+  color: #10b981;
+  font-size: 1rem;
+}
+
+.completed-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #10b981;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 0 1rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .badges-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+  
+  .section {
+    padding: 1.5rem;
+  }
+}
